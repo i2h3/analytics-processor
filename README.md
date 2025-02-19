@@ -14,6 +14,65 @@ This quickly hacked together parser processes a CSV export and renders it as Mar
 7. Export the CSV document from within the ellipsis menu.
 8. Provide the report file as an argument.
 
+## Usage
+
+```plain
+USAGE: analytics-processor <input>
+
+ARGUMENTS:
+  <input>                 The CSV file exported from App Store Connect
+                          analytics.
+
+OPTIONS:
+  -h, --help              Show help information.
+```
+
+## Example Output
+
+The rendered markdown currently looks somewhat like this:
+
+```markdown
+# Major Platform Version Distribution
+
+Report for Whatever on 01.02.25.
+
+## 01.01.25
+
+102.313 in Total.
+
+| **Release** | **Total** | **Percentage** |
+| - | - | - |
+| iOS 18 | 88.474 | 86,5 % |
+| iOS 17 | 10.176 | 9,9 % |
+| iOS 16 | 2.253 | 2,2 % |
+| iOS 15 | 1.276 | 1,2 % |
+| iOS 14 | 63 | 0,1 % |
+| iOS 13 | 12 | 0,0 % |
+| iOS 12 | 51 | 0,0 % |
+| iOS 10 | 2 | 0,0 % |
+| iOS 9 | 6 | 0,0 % |
+
+## 01.02.25
+
+83.983 in Total.
+
+| **Release** | **Total** | **Percentage** |
+| - | - | - |
+| iOS 18 | 74.692 | 88,9 % |
+| iOS 17 | 6.771 | 8,1 % |
+| iOS 16 | 1.530 | 1,8 % |
+| iOS 15 | 890 | 1,1 % |
+| iOS 14 | 47 | 0,1 % |
+| iOS 13 | 13 | 0,0 % |
+| iOS 12 | 33 | 0,0 % |
+| iOS 10 | 3 | 0,0 % |
+| iOS 9 | 4 | 0,0 % |
+```
+
+## Development
+
+You can easily debug it by providing a file path as an argument through the Xcode scheme.
+
 ## License
 
 See [LICENSE](LICENSE) file.
