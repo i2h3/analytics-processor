@@ -14,18 +14,25 @@ This quickly hacked together parser processes a CSV export and renders it as Mar
 7. Export the CSV document from within the ellipsis menu.
 8. Provide the report file as an argument.
 
+## Build
+
+To build a binary, navigate into the package directory and run:
+
+```plaintext
+$ swift build
+```
+
 ## Usage
 
-```plain
-USAGE: analytics-processor <input>
+Then you can run the built binary like this:
 
-ARGUMENTS:
-  <input>                 The CSV file exported from App Store Connect
-                          analytics.
-
-OPTIONS:
-  -h, --help              Show help information.
+```plaintext
+$ swift run AnalyticsProcessor <input file>
 ```
+
+## Development
+
+It is convenient to define an argument in the generated Xcode scheme which specifies the absolute path to an input file for debugging.
 
 ## Example Output
 
