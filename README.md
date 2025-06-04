@@ -3,6 +3,8 @@
 The App Store Connect user interface and exported CSV documents are not straightforward in regards to knowing which major iOS versions users are on.
 This quickly hacked together parser processes a CSV export and renders it as Markdown.
 
+**Warning**: Currently this assumes you use App Store Analytics in German. [Support for other languages still is an open issue](https://github.com/i2h3/analytics-processor/issues/2).
+
 ## How To Get Report
 
 1. Go to App Store Connect.
